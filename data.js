@@ -1,8 +1,7 @@
-// data.js
+// elastic-city-search/app/data.js
 const constants = require('./constants/');
 
-const ELASTIC_SEARCH_HOST = constants.ELASTIC_SEARCH_HOST;
-const ELASTIC_SEARCH_PORT = constants.ELASTIC_SEARCH_PORT;
+const { ELASTIC_SEARCH_HOST, ELASTIC_SEARCH_PORT } = constants;
 
 
 // require the Elasticsearch library

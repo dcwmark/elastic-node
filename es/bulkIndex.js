@@ -82,4 +82,4 @@ const cleanUp = (res, index) => {
     })
 };
 
-module.exports = { bulkIndex };
+module.exports = {bulkIndex};

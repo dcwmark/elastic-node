@@ -2,16 +2,15 @@
 
 "use strict";
 
-require("babel-register");
+require("@babel/register");
 
 const constants = require('./constants/');
 
-/**
- * Elasticsearch Setup 
-**/
+//-
+// Elasticsearch Setup 
+//-
 ( () => {
-    const ELASTIC_SEARCH_HOST = constants.ELASTIC_SEARCH_HOST;
-    const ELASTIC_SEARCH_PORT = constants.ELASTIC_SEARCH_PORT;
+    const { ELASTIC_SEARCH_HOST, ELASTIC_SEARCH_PORT } = constants;
 
     // require the Elasticsearch library
     const elasticsearch = require('elasticsearch');
@@ -34,16 +33,16 @@ const constants = require('./constants/');
     //elasticsearch is ok
 })();
 
-/**
- * Express Setup 
-**/
+//-
+// Express Setup 
+//-
 ( () => {
     const express = require('express');
     const app = express();
     const bodyParser = require('body-parser');
     const path = require('path');
     const port = process.env.PORT || 5000;
-    
+
     // set path to serve static files
     app.use(express.static(path.join(__dirname, 'public')));
     
