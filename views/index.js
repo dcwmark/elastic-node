@@ -20,7 +20,8 @@ router.get('', (req, res, next) => {
     renderer.renderToString(vueApp)
     .then( html => {
         res.end(html);
-    }).catch( err => {
+    })
+    .catch( err => {
         res.status(500).end(`Internal Server Error ${err}`);
         return;
     });
